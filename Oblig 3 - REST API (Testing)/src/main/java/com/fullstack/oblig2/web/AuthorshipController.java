@@ -11,7 +11,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/authors/{authorId}/books/")
+@RequestMapping("/authors/{authorId}/books")
 public class AuthorshipController {
 
     @Autowired
@@ -22,9 +22,9 @@ public class AuthorshipController {
         return authorshipService.getBooksByAuthor(authorId);
     }
 
-    @GetMapping
-    public List<Book> searchBooks(@PathVariable Long authorId, @RequestParam String query) {
-        return authorshipService.searchBooksByAuthor(authorId, query);
-    }
+//    @GetMapping
+//    public List<Book> searchBooks(@PathVariable Long authorId, @RequestParam String query) {
+//        return authorshipService.searchBooksByAuthor(authorId, query);
+//    }
 
 }
